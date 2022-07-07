@@ -6,5 +6,12 @@ using System.Threading.Tasks;
 
  class Category
 	{
-		public string categoryName { get; set; }
-	}
+	public string CategoryName { get; set; } = "";
+	public Guid Id { get; set; }
+    public Category(string categoryName) 
+    {
+        CategoryName = categoryName;
+        Id = Guid.NewGuid();
+    }
+
+}
